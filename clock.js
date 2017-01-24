@@ -1,20 +1,31 @@
-var second = document.getElementById('second')
-var minute = document.querySelector('#minute')
-var hour = document.querySelector('#hour')
+document.addEventListener('DOMContentLoaded', function () {
+  var now = new Date()
+  var seconds = now.getSeconds()
+  var minutes = now.getMinutes()
+  var hours = now.getHours()
+  // var second = document.getElementById('second')
+  // var minute = document.getElementById('minute')
+  // var hour = document.getElementById('hour')
 
-var degrees = 45
+  function runningSecond (sec) {
+    var degrees = sec / 60 * 360
+    second.style.transform = 'rotate(' + degrees + 'deg)'
+  }
+  runningSecond(seconds)
 
-// second.style.transform = "rotate(" + degrees + "deg)";
+  function runningMinute (min) {
+    var degrees = min / 60 * 360
+    minute.style.transform = 'rotate(' + degrees + 'deg)'
+  }
+  runningMinute(minutes)
 
+  function runningHour (hr) {
+    var degrees = hr / 12 * 360
+    hour.style.transform = 'rotate(' + degrees + 'deg)'
+  }
+  runningHour(hours)
 
-
-// var degrees = 45;
-//
-// var el = document.getElementById("myElement");
-// el.style.transform = "rotate(" + degrees + "deg)";
-
-// secondRotation(0); // returns 0
-// secondRotation(59); // returns (59 / 60) * 360
-//
-// hourRotation(12); // returns 0
-// hourRotation(5); // returns (5 / 12) * 360
+  setInterval(function () {
+    location = ''
+  }, 1000)
+})
