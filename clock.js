@@ -1,5 +1,5 @@
 document.addEventListener('DOMContentLoaded', function () {
-  function startClock () {}
+  function startClock () {
     var now = new Date()
     var seconds = now.getSeconds()
     var minutes = now.getMinutes()
