@@ -8,15 +8,12 @@
 }
 
 #hour {
-  position: absolute;
   z-index: 1;
 }
 
 #minute {
-  position: absolute;
 }
 
 #second {
-  position: absolute;
   z-index: 2;
 }
